@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BoltIcon } from '@heroicons/react/24/solid'
+import { Bars3BottomRightIcon, BoltIcon } from '@heroicons/react/24/solid'
 import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
@@ -48,7 +48,21 @@ const [isMenuOpen, setIsMenuOpen] = useState(false)
             </ul>
 
 {/* Mobile Navbar Section */}
+        <div className=' lg:hidden'>
+            {/* dropdown Open Button */}
+            <button aria-label='Open Menu'
+            title='Open Menu'
+            onClick={() => setIsMenuOpen(true)}>
             
+            <Bars3BottomRightIcon className='w-5 text-gray-600'></Bars3BottomRightIcon>
+            </button>
+
+            {isMenuOpen && (
+                
+            )
+
+            }
+        </div>
 
         </div>
 
