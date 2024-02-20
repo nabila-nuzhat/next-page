@@ -15,9 +15,13 @@
   @apply px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 rounded-full bg-yellow-400 inline-block uppercase
 }
 
+.active{
+  @apply font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-400
+}
 
-
-
+.default{
+  @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400
+}
 
 
 

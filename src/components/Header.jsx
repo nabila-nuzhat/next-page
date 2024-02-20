@@ -27,21 +27,21 @@ const [isMenuOpen, setIsMenuOpen] = useState(false)
                     <li>
                         <NavLink to='/'
                         title='Home link'
-                        className={({isActive})=> isActive ? 'text-blue-600' : 'default'}>
+                        className={({isActive})=> isActive ? 'active' : 'default'}>
                             Home
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to='/books'
                         title='Books Link'
-                        className={({isActive})=> isActive ? 'text-blue-600' : 'default'}>
+                        className={({isActive})=> isActive ? 'active' : 'default'}>
                             Books
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to='/about'
                         title='About Link'
-                        className={({isActive})=> isActive ? 'text-blue-600' : 'default'}>
+                        className={({isActive})=> isActive ? 'active' : 'default'}>
                             About Us
                         </NavLink>
                     </li>
