@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Book Cards common design component----------------
 const Book = ({book}) => {
     return (
 // Card parent div--------start
+
+ <Link to={`../book/${book.isbn13}`}>
     <div className=' overflow-hidden relative transition duration-200 transform hover:-translate-y-2 rounded shadow-lg hover:shadow-2xl'>
 
         {/* book image */}
@@ -18,6 +21,7 @@ const Book = ({book}) => {
         </div>
 
     </div>
+    </Link>
 // Card parent div-------end
     );
 };

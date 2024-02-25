@@ -1,6 +1,7 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import Book from './Book';
+import LoadingSpinner from './LoadingSpinner';
 
 const Books = () => {
 /** Previous method of fetch Data: using JS
@@ -17,6 +18,15 @@ const Books = () => {
 
 
 // NEW method fetch data: Using Loader Function
+
+// Showing oading spinner during loading the Page
+const navigation = useNavigation()
+console.log(navigation.state);
+
+if(navigation.state === 'loading'){
+    return <LoadingSpinner></LoadingSpinner>
+}
+
 const {books} = useLoaderData()
 console.log(books);
     return (

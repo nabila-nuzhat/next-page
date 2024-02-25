@@ -8,6 +8,7 @@ import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Books from './components/Books.jsx'
 import BookDetails from './components/BookDetails.jsx'
+import LoadingSpinner from './components/LoadingSpinner.jsx'
 
 
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([{
     path:'about',
     element: <About></About>,
   },
+  {
+    path:'loader',
+    element: <LoadingSpinner></LoadingSpinner>,
+  },
 
   {
     path:'books',
@@ -30,8 +35,9 @@ const router = createBrowserRouter([{
     loader: () => fetch('https://api.itbook.store/1.0/new'),
   },
   {
-    path:'book/id',
+    path:'book/:id',
     element: <BookDetails></BookDetails>,
+    loader:({params}) => fetch(`https://api.itbook.store/1.0/books/${params.id}`)
   },
 
 
